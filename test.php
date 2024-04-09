@@ -10,10 +10,10 @@ $doc = new DOMDocument();
 $doc->loadHTML($htmlString);
 $xpath = new DOMXPath($doc);
 $titles = $xpath->evaluate('//ol[@class="row"]//li//article//h3/a');
-// $extractedTitles = [];
-// foreach ($titles as $title) {
-//     $extractedTitles[] = $title->textContent.PHP_EOL;
-//     echo $title->textContent.PHP_EOL;
-// }
+$extractedTitles = [];
+foreach ($titles as $title) {
+    $extractedTitles[] = $title->textContent.PHP_EOL;
+    echo $title->textContent.PHP_EOL;
+}
 
 ?>
